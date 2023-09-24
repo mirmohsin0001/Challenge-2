@@ -34,12 +34,19 @@
 body{
     font-family: hanken grotesk;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items:center;
     height: 100vh;
+    width: 100vw;
     flex-wrap: wrap;
 }
 
+.result-summary{
+    display: flex;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: auto;
+}
 
 h1{
     font-weight: 800;
@@ -48,7 +55,7 @@ h1{
 }
 
 h2{
-        color: var(--Pale-blue);
+    color: var(--Pale-blue);
 }
 
 h3{
@@ -60,6 +67,7 @@ P{
     font-family: hanken grotesk;
     color: var(--Light-lavender);
 } 
+
 .result{
     background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
     width: 250px;
@@ -88,8 +96,6 @@ P{
     width: 250px;
     height: 350px;
     padding: 20px 30px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 0px 20px 20px 0px;
 }
 
 .summary h3{
@@ -145,11 +151,15 @@ button{
     background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
     border-radius: 100px;
     width: 100%;
-}
-
-a{
     text-decoration: none;
     color: #fff;
     font-weight: 700;
-    
+}
+@media screen and (max-width: 600px) {
+    .result-summary{
+        flex-direction: column; 
+    }
+    .result, .summary{
+        width: 100%;  
+    }
 }
